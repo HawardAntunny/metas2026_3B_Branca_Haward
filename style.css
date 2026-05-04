@@ -55,7 +55,7 @@ body {
 }
 
 .botoes{
-    display: flex;
+    display: block;
 }
 
 .botao.ativo{
@@ -71,7 +71,7 @@ body {
 
 
 .aba-conteudo.ativo{
-    display: flex;
+    display: block;
 }
 
 .aba-conteudo{
