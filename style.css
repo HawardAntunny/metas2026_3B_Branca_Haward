@@ -55,7 +55,7 @@ body {
 }
 
 .botoes{
-    display: flex;
+    display: block;
 }
 
 .botao.ativo{
