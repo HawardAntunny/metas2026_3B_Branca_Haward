@@ -42,9 +42,32 @@ function calculaTempo(tempoObjetivo) {
 }
 
 function atualizaCronometro(){
-       
-    for (let i=0; i<contadores.length;i++){
-        contadores[i].textContent = calculaTempo(tempos[i]);   
+
+    for (let i = 0; i < tempos.length; i++){
+
+        let tempoAtual = new Date();
+        let tempoFinal = tempos[i] - tempoAtual;
+
+        let segundos = Math.floor(tempoFinal / 1000);
+        let minutos = Math.floor(segundos / 60);
+        let horas = Math.floor(minutos / 60);
+        let dias = Math.floor(horas / 24);
+
+        segundos %= 60;
+        minutos %= 60;
+        horas %= 24;
+
+        if (tempoFinal > 0){
+            document.getElementById(`dias${i}`).textContent = dias;
+            document.getElementById(`horas${i}`).textContent = horas;
+            document.getElementById(`min${i}`).textContent = minutos;
+            document.getElementById(`seg${i}`).textContent = segundos;
+        } else {
+            document.getElementById(`dias${i}`).textContent = "0";
+            document.getElementById(`horas${i}`).textContent = "0";
+            document.getElementById(`min${i}`).textContent = "0";
+            document.getElementById(`seg${i}`).textContent = "0";
+        }
     }
 }
 
