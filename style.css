@@ -71,7 +71,7 @@ body {
 
 
 .aba-conteudo.ativo{
-    display: block;
+    display: flex;
 }
 
 .aba-conteudo{
